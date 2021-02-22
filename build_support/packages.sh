@@ -41,6 +41,7 @@ install() {
     LINUX)
       version=$(cat /etc/os-release | grep VERSION_ID | cut -d '"' -f 2)
       case $version in
+        16.04) install_linux ;;
         18.04) install_linux ;;
         20.04) install_linux ;;
         *) give_up ;;
